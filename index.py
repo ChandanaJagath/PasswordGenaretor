@@ -7,14 +7,14 @@ def generate_password(length, use_uppercase=True, use_lowercase=True, use_number
     digits = string.digits if use_numbers else ''
     symbols = string.punctuation if use_symbols else ''
 
-    all_characters = f' {uppercase_letters}{lowercase_letters}{digits}{symbols} '
+    all_characters = f'{uppercase_letters}{lowercase_letters}{digits}{symbols}'
 
     if not all_characters:
         print("plese select at least one character set.")
-    return None
+        return None
 
     password = '' .join(random.choice(all_characters)for _ in range (length))
-    return _PasswordType
+    return password
 
 def main():
 
